@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_8sdp">
+
+        <EditText
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_1sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_1sdp"
+            android:cursorVisible="true"
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:textCursorDrawable="@null"
+            android:background="@null"
+            android:fontFamily="@font/cabin_regular"
+            android:hint="Search: name, type"
+            android:textColor="@color/primary_text"
+            android:textColorHint="@color/secondary_text"
+            android:textSize="@dimen/_15ssp" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphTextView
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="Armor List: "
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:fontFamily="@font/cabin_regular"
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:indeterminateTint="@color/secondary_text"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/primary_text"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<soup.neumorphism.NeumorphCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Neumorph.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:layout_marginEnd="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    app:neumorph_backgroundColor="@color/background"
+    app:neumorph_shadowColorDark="@color/dark_shadow"
+    app:neumorph_shadowColorLight="@color/light_shadow"
+    app:neumorph_shadowElevation="@dimen/_5sdp"
+    app:neumorph_shapeAppearance="@style/NueMorphismCardView">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/type_imageView_rv_item"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_chest"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_55sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/type_imageView_rv_item"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/name_rv_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_regular"
+                android:text="Harold Wilson"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rank_rv_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cabin_regular"
+                    android:text="HIGH"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/defense_rv_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cabin_regular"
+                    android:text="53"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/slot_rv_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cabin_regular"
+                    android:text="1"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="@dimen/_13ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</soup.neumorphism.NeumorphCardView>
